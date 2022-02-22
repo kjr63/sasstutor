@@ -1,0 +1,47 @@
+/*
+    Created on : 8.1.2020, 12:09:54
+    Author     : risberg
+*/
+
+.btn {
+    padding: 1.5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    background-image: linear-gradient(to right, $color-primary-dark, $color-primary-light);
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all .2s;
+    position: relative;
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba(white,.8);
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+    &:active {
+        //outline: none;
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 1rem rgba(white,.8);
+    }    
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 2rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+        background-color: $color-primary;
+    }    
+    &--animated {
+        animation: moveInBottom .5s ease-out .75s;
+        animation-fill-mode: backwards;
+    }    
+}

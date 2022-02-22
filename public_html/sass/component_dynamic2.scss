@@ -1,0 +1,35 @@
+/*
+    Created on : 18.2.2020, 12:17:55
+    Author     : risberg
+*/
+.dynamic2 {
+    //implisiittisen gridin sarakkeiden määrä jsx:ssä oltava 1 (tuottaa flex-boxeja?)
+    margin: 1rem;
+    padding: 0.01em;
+    //width: 100%;
+    &__slist {
+        display: flex;
+        flex-direction: column;
+        &__header {
+            display: flex;
+            justify-content: space-evenly;
+            background-color: red;
+            color: white;
+            padding: 1rem;
+            &-1 {}
+            &-2 {}
+        }
+        &__item {
+            display: flex;
+            justify-content: space-evenly;
+            border-left: 1px solid lightgrey;
+            border-right: 1px solid lightgrey;
+            border-bottom: 1px solid lightgrey;
+            padding: 1rem;
+            &-1 {}
+            &-2 {}
+        }
+    }
+}
+
+

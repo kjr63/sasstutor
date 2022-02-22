@@ -1,0 +1,655 @@
+/*
+    Created on : 11.11.2019, 12:44:37
+    Author     : risberg
+*/
+/*
+    Created on : 11.11.2019, 13:42:13
+    Author     : risberg
+*/
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 31.25em) {
+    html {
+      font-size: 30%; } }
+  @media only screen and (min-width: 31.25em) and (max-width: 43.5em) {
+    html {
+      font-size: 40%; } }
+  @media only screen and (min-width: 43.5em) and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 68.75em) {
+    html {
+      font-size: 62,5%; } }
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  line-height: 1.0; }
+
+pre {
+  display: inline; }
+
+/*
+    Created on : 11.11.2019, 14:32:02
+    Author     : risberg
+*/
+.mainroot {
+  background-color: #fff;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-size: cover;
+  min-height: 85vh; }
+  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+    .mainroot {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+      height: 95vh; } }
+  .mainroot__logoimage {
+    width: 30%; }
+  .mainroot__headtitle {
+    font-size: 6rem; }
+  .mainroot__subtitle {
+    font-size: 2rem; }
+  .mainroot__button {
+    font-size: 1.5rem; }
+
+/*
+    Created on : 12.11.2019, 14:44:05
+    Author     : risberg
+*/
+.header {
+  background-color: #fff;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-size: cover;
+  padding: 4rem;
+  min-height: 85vh;
+  display: grid;
+  grid-gap: 4rem;
+  grid-template-rows: 7rem auto auto;
+  grid-template-columns: 1Fr 5Fr 1Fr; }
+  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+    .header {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+      height: 95vh; } }
+  .header__top__logo--image {
+    max-width: 6.5rem; }
+  .header__top__modal {
+    font-size: 3rem;
+    background-color: #fff;
+    border-radius: 50%; }
+  .header__topmodal {
+    width: 6.5rem;
+    height: 6.5rem;
+    background-color: #fff;
+    border-radius: 50%;
+    grid-area: 1 / 3 / 2 / 4; }
+  .header__middle {
+    grid-area: 2 / 2 / 3 / 3;
+    display: flex;
+    justify-content: center; }
+    .header__middle__text {
+      color: white; }
+      .header__middle__text--main {
+        display: flex;
+        justify-content: center;
+        font-size: 6rem;
+        letter-spacing: 3.5rem; }
+        @media only screen and (max-width: 43.5em) {
+          .header__middle__text--main {
+            letter-spacing: 1.5rem; } }
+      .header__middle__text--sub {
+        display: flex;
+        justify-content: center;
+        font-size: 2rem;
+        letter-spacing: 1.75rem; }
+        @media only screen and (max-width: 43.5em) {
+          .header__middle__text--sub {
+            letter-spacing: 0.9rem; } }
+      .header__middle__text--bottom {
+        display: flex;
+        justify-content: space-between; }
+        .header__middle__text--bottom--button {
+          font-size: 1.5rem;
+          color: black;
+          background-color: white;
+          padding: 1.5rem;
+          margin-top: 6rem;
+          border-radius: 4rem;
+          cursor: pointer; }
+
+/*
+    Created on : 5.12.2019, 10:52:47
+    Author     : risberg
+*/
+.sonabout {
+  height: 64rem;
+  background-size: cover;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/about_bg.png);
+  transform: skewY(-7deg);
+  margin-top: 16rem;
+  padding-top: 0.01em; }
+  .sonabout > * {
+    transform: skewY(7deg); }
+  .sonabout__header {
+    color: white;
+    font-size: 5rem;
+    font-family: 'Passion', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 8rem; }
+  .sonabout__textbox {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 8rem; }
+    .sonabout__textbox__1 {
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 2px;
+      text-align: center;
+      padding: 2rem; }
+      .sonabout__textbox__1__icon {
+        margin-top: 2rem;
+        margin-bottom: 2rem; }
+        .sonabout__textbox__1__icon__svg {
+          width: 6rem;
+          height: 6rem;
+          fill: #28b485; }
+    .sonabout__textbox__2 {
+      background-color: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      padding: 2rem; }
+      .sonabout__textbox__2__icon {
+        margin-top: 2rem;
+        margin-bottom: 2rem; }
+        .sonabout__textbox__2__icon__svg {
+          width: 6rem;
+          height: 6rem;
+          fill: #28b485; }
+
+/*
+    Created on : 26.11.2019, 14:04:18
+    Author     : risberg
+*/
+.navbar {
+  background-color: black;
+  height: 10rem;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  z-index: 9999;
+  border-radius: 0 0 25% 25%; }
+  .navbar__logos {
+    padding: 1rem;
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: space-around;
+    align-items: center; }
+    .navbar__logos__img {
+      animation-name: liftWeight;
+      animation-duration: 2s;
+      animation-timing-function: ease-in;
+      animation-iteration-count: infinite;
+      animation-delay: 5s; }
+      .navbar__logos__img__icon {
+        font-size: 6rem;
+        display: inline-block;
+        background-image: linear-gradient(to right, #28b485, #7ed56f);
+        background-clip: text;
+        color: transparent;
+        transform: rotate(-45deg); }
+    .navbar__logos__text__top {
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-align: right;
+      animation-name: moveLeftRight;
+      animation-duration: 4s;
+      animation-timing-function: ease-out; }
+    .navbar__logos__text__bottom {
+      font-family: 'Passion', sans-serif;
+      font-size: 4rem;
+      animation-name: moveRightLeft;
+      animation-duration: 2s;
+      animation-timing-function: ease-out; }
+      .navbar__logos__text__bottom--o {
+        color: #55c57a; }
+  .navbar__menu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 2 1 auto; }
+    .navbar__menu__link {
+      text-decoration: none;
+      font-size: 1.5rem;
+      border-radius: 0.4rem;
+      padding: 1rem; }
+      .navbar__menu__link:hover {
+        background-color: whitesmoke;
+        color: #55c57a; }
+    .navbar__menu__dropdown {
+      align-self: center;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer; }
+      .navbar__menu__dropdown__title {
+        display: block;
+        font-size: 1.5rem; }
+      .navbar__menu__dropdown__content {
+        display: none;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 1rem;
+        background-color: whitesmoke;
+        color: dimgrey;
+        list-style-type: none;
+        margin-top: 1rem;
+        border-radius: 0.4rem; }
+      .navbar__menu__dropdown:hover > .navbar__menu__dropdown__content {
+        display: flex; }
+      .navbar__menu__dropdown:hover > .navbar__menu__dropdown__title {
+        display: none; }
+  .navbar__action {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+
+.list--item {
+  padding-bottom: 0.5rem; }
+  .list--item:hover {
+    color: #55c57a; }
+
+.list--link {
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 1.2rem; }
+
+@keyframes liftWeight {
+  from {
+    transform: translateY(0px); }
+  to {
+    transform: translateY(-16px); } }
+
+@keyframes moveLeftRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-128px); }
+  80% {
+    transform: translateX(16px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0px); } }
+
+@keyframes moveRightLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(32px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0px); } }
+
+/*
+    Created on : 25.11.2019, 14:08:39
+    Author     : risberg
+*/
+.sonheader {
+  height: 120vh;
+  background-image: url(../img/son_bg.png);
+  background-size: cover;
+  display: flex;
+  flex-direction: column; }
+  .sonheader__empty1 {
+    flex: 4 1 auto; }
+  .sonheader__content {
+    flex: 0.2 1 auto;
+    display: flex;
+    justify-content: space-between; }
+    .sonheader__content__empty {
+      flex: 1 1 auto; }
+    .sonheader__content__text {
+      background-color: rgba(0, 0, 0, 0.5);
+      flex: 1 1 auto;
+      padding-right: 16rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 10em 0 0 10em; }
+      .sonheader__content__text__top {
+        font-family: serif;
+        font-size: 14rem;
+        color: white; }
+        .sonheader__content__text__top--colored {
+          color: #55c57a; }
+      .sonheader__content__text__bottom {
+        font-size: 2rem;
+        color: white; }
+  .sonheader__empty2 {
+    flex: 1 1 auto; }
+
+/*
+    Created on : 20.11.2019, 11:41:31
+    Author     : risberg
+*/
+#modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999; }
+
+.modal {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .modal__content {
+    background-color: snow;
+    font-size: large;
+    padding: 2rem; }
+    .modal__content__1 {
+      display: flex;
+      flex-direction: row-reverse;
+      font-size: xx-large; }
+      .modal__content__1--btn {
+        cursor: pointer; }
+
+/*
+    Created on : 9.12.2019, 14:13:50
+    Author     : risberg
+*/
+.blog {
+  margin-top: 16rem;
+  padding: 0.01em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 80vh; }
+  .blog__image {
+    overflow: hidden;
+    background-image: url("../img/woman.jpg");
+    background-size: cover; }
+  .blog__text {
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 8rem; }
+    .blog__text__item--1 {
+      color: #55c57a;
+      font-weight: bolder; }
+    .blog__text__item--3 {
+      font-style: italic;
+      font-size: 4rem; }
+    .blog__text__item--4 {
+      color: lightgray; }
+
+/*
+    Created on : 10.12.2019, 13:34:29
+    Author     : risberg
+*/
+.gallery {
+  margin-top: 16rem;
+  padding: 2rem;
+  background-color: whitesmoke;
+  height: 95vh;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(8, 1fr); }
+  .gallery__item {
+    background-image: url(../img/woman.jpg);
+    background-size: cover; }
+    .gallery__item--1 {
+      grid-area: 1 / 1 / 3 / 3; }
+    .gallery__item--2 {
+      grid-area: 1 / 3 / 4 / 6; }
+    .gallery__item--3 {
+      grid-area: 1 / 6 / 3 / 7; }
+    .gallery__item--4 {
+      grid-area: 1 / 7 / 3 / 9; }
+    .gallery__item--5 {
+      grid-area: 3 / 1 / 6 / 3; }
+    .gallery__item--6 {
+      grid-area: 4 / 3 / 6 / 5; }
+    .gallery__item--7 {
+      grid-area: 4 / 5 / 6 / 6; }
+    .gallery__item--8 {
+      grid-area: 3 / 6 / 6 / 8; }
+    .gallery__item--9 {
+      grid-area: 3 / 8 / 6 / 9; }
+
+/*
+    Created on : 10.12.2019, 14:54:01
+    Author     : risberg
+*/
+.catalog {
+  padding-top: 0.01em;
+  height: 64rem;
+  background-size: cover;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  transform: skewY(7deg);
+  margin-top: 16rem; }
+  .catalog__header {
+    text-align: center;
+    margin-top: 8rem;
+    font-size: 5rem;
+    font-family: 'Passion', sans-serif;
+    color: white;
+    transform: skewY(-7deg); }
+  .catalog__content {
+    transform: skewY(-7deg);
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    margin-top: 8rem;
+    text-align: right; }
+    .catalog__content__1 {
+      box-shadow: 0.8rem 1.6rem #28b485;
+      width: 25%;
+      background-color: whitesmoke;
+      border-radius: 0.4rem; }
+      .catalog__content__1__header {
+        background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../img/hero.jpg);
+        background-size: cover;
+        background-blend-mode: screen;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        height: 16rem;
+        position: relative;
+        z-index: 1; }
+      .catalog__content__1__headertext {
+        display: inline-block;
+        background-image: linear-gradient(to right bottom, #5643fa, #2998ff);
+        padding: 5px;
+        font-size: 4rem;
+        font-weight: lighter;
+        transform: translateY(-8rem);
+        position: relative;
+        z-index: 5; }
+      .catalog__content__1__content {
+        list-style-type: none;
+        text-align: center;
+        color: #333;
+        margin-top: -4rem;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 16rem; }
+    .catalog__content__2 {
+      box-shadow: 0.8rem 1.6rem #28b485;
+      width: 25%;
+      background-color: whitesmoke;
+      border-radius: 0.4rem; }
+      .catalog__content__2__header {
+        background-image: linear-gradient(to right bottom, #FF3366, #BA265D), url(../img/about_bg.png);
+        background-size: cover;
+        background-blend-mode: screen;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        height: 16rem;
+        position: relative;
+        z-index: 1; }
+      .catalog__content__2__headertext {
+        display: inline-block;
+        background-image: linear-gradient(to right bottom, #BA265D, #FF3366);
+        padding: 5px;
+        font-size: 4rem;
+        font-weight: lighter;
+        transform: translateY(-8rem);
+        position: relative;
+        z-index: 5; }
+      .catalog__content__2__content {
+        list-style-type: none;
+        text-align: center;
+        color: #333;
+        margin-top: -4rem;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 16rem; }
+    .catalog__content__3 {
+      box-shadow: 0.8rem 1.6rem #28b485;
+      width: 25%;
+      background-color: whitesmoke;
+      border-radius: 0.4rem; }
+      .catalog__content__3__header {
+        background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/woman.jpg);
+        background-size: cover;
+        background-blend-mode: screen;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        height: 16rem;
+        position: relative;
+        z-index: 1; }
+      .catalog__content__3__headertext {
+        display: inline-block;
+        background-image: linear-gradient(to right bottom, #ff7730, #ffb900);
+        padding: 5px;
+        font-size: 4rem;
+        font-weight: lighter;
+        transform: translateY(-8rem);
+        position: relative;
+        z-index: 5; }
+      .catalog__content__3__content {
+        list-style-type: none;
+        text-align: center;
+        color: #333;
+        margin-top: -4rem;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 16rem; }
+
+.c_item--1 {
+  border-bottom: solid 1px lightgrey;
+  padding-bottom: 4px; }
+
+.contact {
+  background-color: black;
+  color: white;
+  padding: 8rem;
+  font-size: 1.8rem;
+  font-weight: 300; }
+  .contact__header {
+    font-family: 'Impact', sans-serif;
+    font-size: 2.6rem;
+    margin: 2rem;
+    font-weight: normal; }
+  .contact__address {
+    margin: 2rem; }
+  .contact__phone {
+    margin: 2rem; }
+  .contact__email {
+    margin: 2rem; }
+  .contact--color {
+    color: lightgrey; }
+
+/*
+    Created on : 8.1.2020, 12:09:54
+    Author     : risberg
+*/
+.btn {
+  padding: 1.5rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  background-image: linear-gradient(to right, #28b485, #7ed56f);
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all .2s;
+  position: relative; }
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(255, 255, 255, 0.8); }
+    .btn:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0; }
+  .btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.8); }
+  .btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+    background-color: #55c57a; }
+  .btn--animated {
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards; }
+
+/*
+    Created on : 18.2.2020, 12:17:55
+    Author     : risberg
+*/
+.dynamic2 {
+  margin: 1rem;
+  padding: 0.01em; }
+  .dynamic2__slist {
+    display: flex;
+    flex-direction: column; }
+    .dynamic2__slist__header {
+      display: flex;
+      justify-content: space-evenly;
+      background-color: red;
+      color: white;
+      padding: 1rem; }
+    .dynamic2__slist__item {
+      display: flex;
+      justify-content: space-evenly;
+      border-left: 1px solid lightgrey;
+      border-right: 1px solid lightgrey;
+      border-bottom: 1px solid lightgrey;
+      padding: 1rem; }
+
+/*
+    Created on : 8.1.2020, 12:43:54
+    Author     : risberg
+*/
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }

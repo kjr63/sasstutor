@@ -1,0 +1,26 @@
+.contact {
+    background-color: black;
+    color: white;
+    padding: 8rem;
+    font-size: 1.8rem;
+    font-weight: 300;
+    &__header {
+        font-family: 'Impact', sans-serif;
+        font-size: 2.6rem;
+        margin: 2rem;
+        font-weight: normal;
+    }
+    &__address {
+        margin: 2rem;
+    }
+    &__phone {
+        margin: 2rem;
+    }
+    &__email {
+        margin: 2rem;        
+    }
+    &--color {
+        color: lightgrey;
+    }
+}
+

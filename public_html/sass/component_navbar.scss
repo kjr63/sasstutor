@@ -1,0 +1,147 @@
+/*
+    Created on : 26.11.2019, 14:04:18
+    Author     : risberg
+*/
+.navbar {
+    //Seuraavaksi extended grid ja glitch-artia jne.
+    background-color: black;
+    height: 10rem;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    z-index: 9999;
+    border-radius: 0 0 25% 25%;
+    &__logos {
+        padding: 1rem;
+        display: flex;
+        flex: 1 1 auto;
+        justify-content: space-around;
+        align-items: center;
+        &__img {
+            //animation: mymove 5s infinite;
+            animation-name: liftWeight;
+            animation-duration: 2s;
+            animation-timing-function: ease-in;
+            animation-iteration-count: infinite;
+            animation-delay: 5s;
+            &__icon {
+                font-size: 6rem;
+                display: inline-block;
+                background-image: linear-gradient(to right, $color-primary-dark, $color-primary-light);
+                background-clip: text;
+                color: transparent;
+                transform: rotate(-45deg);
+            }            
+        }
+        &__text {
+            &__top {
+                font-size: 1.2rem;
+                font-weight: 600;
+                text-align: right;
+                animation-name: moveLeftRight;
+                animation-duration: 4s;
+                animation-timing-function: ease-out;
+                //animation-iteration-count: infinite;
+                //animation-delay: 4s;
+            }
+            &__bottom {
+                font-family: 'Passion', sans-serif;
+                font-size: 4rem;
+                //font-weight: 900;
+                animation-name: moveRightLeft;
+                animation-duration: 2s;
+                animation-timing-function: ease-out;
+                //animation-delay: 2s;
+                &--o {
+                    color: $color-primary;
+                }
+            }
+        }
+    }
+    &__menu {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex: 2 1 auto;
+        //padding-top: 3rem;
+        &__link {
+            text-decoration: none;
+            font-size: 1.5rem;
+            border-radius: 0.4rem;
+            padding: 1rem;
+            &:hover {
+                background-color: whitesmoke;
+                color: $color-primary;
+            }
+        }
+        &__dropdown {
+            align-self: center;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            &__title {
+                display: block;
+                font-size: 1.5rem;
+            }
+            &__content {
+                display: none;
+                //display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                //padding-top: 0.01em;
+                //padding-left: 1rem;
+                //padding-right: 1rem;
+                padding: 1rem;
+                //min-height: 8rem;
+                background-color: whitesmoke;
+                color: dimgrey;
+                list-style-type: none;
+                margin-top: 1rem;
+                border-radius: 0.4rem;
+            }
+            &:hover > &__content {
+                display: flex;
+            } 
+            &:hover > &__title {
+                display: none;
+            }
+        }        
+    }
+    &__action {
+        flex: 1 1 auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+.list {
+    &--item {
+        padding-bottom: 0.5rem;
+        &:hover {
+            color: $color-primary;
+        }        
+    }
+    &--link {
+        text-decoration: none;
+        font-weight: bolder;
+        font-size: 1.2rem;
+    }
+}
+
+@keyframes liftWeight {
+  from {transform: translateY(0px);}
+  to {transform: translateY(-16px);}
+}
+@keyframes moveLeftRight {
+    0% { opacity:0; transform:translateX(-128px);}
+    80% { transform:translateX(16px);}
+    100% { opacity:1; transform:translateX(0px);}
+}
+@keyframes moveRightLeft {
+    0% { opacity:0; transform:translateX(32px);}
+    //80% { transform:translateX(-4px); }
+    100% { opacity:1; transform:translateX(0px);}
+}
